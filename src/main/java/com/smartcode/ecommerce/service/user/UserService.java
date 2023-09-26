@@ -1,4 +1,4 @@
-package com.smartcode.ecommerce.service;
+package com.smartcode.ecommerce.service.user;
 
 import com.smartcode.ecommerce.model.UserEntity;
 

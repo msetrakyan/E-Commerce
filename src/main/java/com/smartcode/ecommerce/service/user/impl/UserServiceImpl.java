@@ -1,13 +1,16 @@
-package com.smartcode.ecommerce.service.impl;
+package com.smartcode.ecommerce.service.user.impl;
 
 import com.smartcode.ecommerce.exception.ResourceNotFoundException;
+import com.smartcode.ecommerce.exception.UserAlreadyExistsException;
 import com.smartcode.ecommerce.model.UserEntity;
 import com.smartcode.ecommerce.repository.UserRepository;
-import com.smartcode.ecommerce.service.UserService;
+import com.smartcode.ecommerce.service.mail.MailService;
+import com.smartcode.ecommerce.service.user.UserService;
+import com.smartcode.ecommerce.util.RandomGenerator;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
-import java.lang.module.ResolutionException;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,9 +19,9 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final MailService mailService;
 
     public UserEntity create(UserEntity userEntity) {
-
         return userRepository.save(userEntity);
     }
 

@@ -1,13 +1,15 @@
 package com.smartcode.ecommerce.controllers;
 
+import com.smartcode.ecommerce.exception.UserAlreadyExistsException;
 import com.smartcode.ecommerce.model.UserEntity;
-import com.smartcode.ecommerce.service.UserService;
+import com.smartcode.ecommerce.service.mail.MailService;
+import com.smartcode.ecommerce.service.user.UserService;
+import com.smartcode.ecommerce.util.RandomGenerator;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -16,6 +18,7 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    private final MailService mailService;
 
 
 
@@ -23,7 +26,18 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<UserEntity> create(@RequestBody UserEntity userEntity) {
-        return ResponseEntity.status(200).body(userService.create(userEntity));
+
+//        if(userService.findById(userEntity.getId()) != null) {
+//            throw new UserAlreadyExistsException("User already exists");
+//        }
+
+        String code = RandomGenerator.generateNumericString(6);
+        userEntity.setCode(code);
+        mailService.sendMail(userEntity.getEmail(), "Verification", code);
+        userEntity.setBalance(new BigDecimal(0));
+        userEntity.setIsVerified(false);
+
+        return ResponseEntity.ok(userService.create(userEntity));
     }
 
 
