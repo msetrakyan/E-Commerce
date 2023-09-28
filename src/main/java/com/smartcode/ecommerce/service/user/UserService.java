@@ -1,24 +1,26 @@
 package com.smartcode.ecommerce.service.user;
 
-import com.smartcode.ecommerce.model.UserEntity;
+import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
+import com.smartcode.ecommerce.model.user.dto.UserDto;
+import com.smartcode.ecommerce.model.user.UserEntity;
 
 import java.util.List;
 
 public interface UserService {
 
-    UserEntity create(UserEntity userEntity);
+    UserDto create(UserCreateRequest userEntity);
 
-    void delete(UserEntity userEntity);
+    void delete(Integer id);
 
-    void update(UserEntity userEntity);
+    UserDto update(UserEntity userEntity);
 
-    UserEntity findById(Integer id);
+    UserDto findById(Integer id);
 
-    UserEntity findByUsername(String username);
+    UserDto findByUsername(String username);
 
-    UserEntity findByEmail(String email);
+    UserDto findByEmail(String email);
 
-    List<UserEntity> findAll();
+    List<UserDto> findAll();
 
 
 

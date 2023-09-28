@@ -1,18 +1,17 @@
 package com.smartcode.ecommerce.service.user.impl;
 
 import com.smartcode.ecommerce.exception.ResourceNotFoundException;
-import com.smartcode.ecommerce.exception.UserAlreadyExistsException;
-import com.smartcode.ecommerce.model.UserEntity;
+import com.smartcode.ecommerce.mapper.UserMapper;
+import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
+import com.smartcode.ecommerce.model.user.dto.UserDto;
+import com.smartcode.ecommerce.model.user.UserEntity;
 import com.smartcode.ecommerce.repository.UserRepository;
 import com.smartcode.ecommerce.service.mail.MailService;
 import com.smartcode.ecommerce.service.user.UserService;
-import com.smartcode.ecommerce.util.RandomGenerator;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -20,53 +19,79 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final MailService mailService;
+    private final UserMapper userMapper;
 
-    public UserEntity create(UserEntity userEntity) {
-        return userRepository.save(userEntity);
+    public UserDto create(UserCreateRequest userCreateRequest) {
+
+        UserEntity userEntity = userMapper.toEntity(userCreateRequest);
+
+        userRepository.save(userEntity);
+
+        return userMapper.toDto(userEntity);
     }
 
     @Override
-    public void delete(UserEntity userEntity) {
+    public void delete(Integer id) {
+        UserEntity userEntity = userRepository.findById(id).get();
         userRepository.delete(userEntity);
     }
 
     @Override
-    public void update(UserEntity userEntity) {
-        userRepository.save(userEntity);
+    public UserDto update(UserEntity userEntity) {
+
+        UserEntity findById = userRepository.findById(userEntity.getId()).orElseThrow(() ->
+        new RuntimeException(String.format("User by id: %d does not exist", userEntity.getId())));
+
+        findById.setLastname(userEntity.getLastname());
+        findById.setName(userEntity.getName());
+        findById.setAge(userEntity.getAge());
+        findById.setEmail(userEntity.getEmail());
+        findById.setPassword(userEntity.getPassword());
+        findById.setUsername(userEntity.getUsername());
+        findById.setBalance(userEntity.getBalance());
+
+        userRepository.save(findById);
+
+        return userMapper.toDto(findById);
     }
 
     @Override
-    public UserEntity findById(Integer id) {
-        Optional<UserEntity> byId = userRepository.findById(id);
-        if(byId != null) {
-            return byId.get();
-        } else {
-            throw new ResourceNotFoundException("User id does not exist");
-        }
+    public UserDto findById(Integer id) {
+
+        UserEntity userEntity = userRepository.findById(id).orElseThrow(() ->
+                new ResourceNotFoundException(String.format("User by id: %d does not exist", id))
+                );
+
+        return userMapper.toDto(userEntity);
     }
 
     @Override
-    public UserEntity findByUsername(String username) {
-        UserEntity byUsername = userRepository.findByUsername(username);
-        if(byUsername != null) {
-            return byUsername;
-        } else {
-            throw new ResourceNotFoundException("Username does not exist");
+    public UserDto findByUsername(String username) {
+
+        UserEntity userEntity = userRepository.findByUsername(username);
+
+        if(userEntity == null) {
+            throw new ResourceNotFoundException(String.format("User by username: %s does not exist", username));
         }
+
+        return userMapper.toDto(userEntity);
     }
 
-    public UserEntity findByEmail(String email) {
+    public UserDto findByEmail(String email) {
+
         UserEntity userEntity = userRepository.findByEmail(email);
-        if(userEntity != null) {
-            return userEntity;
-        } else {
-            throw new ResourceNotFoundException("User with such email does not exist");
+
+        if(userEntity == null) {
+            throw new ResourceNotFoundException(String.format("User by Email: %s does not exist", email));
         }
+
+        return userMapper.toDto(userEntity);
     }
 
-    public List<UserEntity> findAll() {
-        return userRepository.findAll();
+    public List<UserDto> findAll() {
+        return userRepository.findAll().stream().map(userMapper::toDto).toList();
     }
+
 
 
 }

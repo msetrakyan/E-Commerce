@@ -1,4 +1,4 @@
-package com.smartcode.ecommerce.model;
+package com.smartcode.ecommerce.model.user;
 
 
 import lombok.Getter;
