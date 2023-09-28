@@ -9,8 +9,6 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class ProductDto extends BaseProductDto {
 
     private Boolean isInDeadline;

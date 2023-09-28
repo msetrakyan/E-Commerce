@@ -10,10 +10,10 @@ import org.mapstruct.Mapping;
 public interface ProductMapper {
 
 
-    @Mapping(target = "")
+    @Mapping(target = "name")
     ProductDto toDto(ProductEntity productEntity);
 
-    @Mapping(target = "")
+    @Mapping(target = "name")
     ProductEntity toEntity(ProductCreateRequest productCreateRequest);
 
 
