@@ -1,5 +1,6 @@
 package com.smartcode.ecommerce.service.user.impl;
 
+import com.smartcode.ecommerce.exception.DuplicationException;
 import com.smartcode.ecommerce.exception.ResourceNotFoundException;
 import com.smartcode.ecommerce.mapper.UserMapper;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
@@ -23,10 +24,11 @@ public class UserServiceImpl implements UserService {
 
     public UserDto create(UserCreateRequest userCreateRequest) {
 
+        if(userRepository.findByUsername(userCreateRequest.getUsername()) != null) {
+            throw new DuplicationException(String.format("User by username: %s already exists", userCreateRequest.getUsername()));
+        }
         UserEntity userEntity = userMapper.toEntity(userCreateRequest);
-
         userRepository.save(userEntity);
-
         return userMapper.toDto(userEntity);
     }
 
@@ -40,7 +42,7 @@ public class UserServiceImpl implements UserService {
     public UserDto update(UserEntity userEntity) {
 
         UserEntity findById = userRepository.findById(userEntity.getId()).orElseThrow(() ->
-        new RuntimeException(String.format("User by id: %d does not exist", userEntity.getId())));
+        new ResourceNotFoundException(String.format("User by id: %d does not exist", userEntity.getId())));
 
         findById.setLastname(userEntity.getLastname());
         findById.setName(userEntity.getName());
