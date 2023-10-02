@@ -1,5 +1,6 @@
 package com.smartcode.ecommerce.controllers;
 
+import com.smartcode.ecommerce.model.user.UserFilterModel;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
 import com.smartcode.ecommerce.service.mail.MailService;
@@ -26,8 +27,8 @@ public class UserController {
 
 
     @GetMapping
-    public ResponseEntity<List<UserDto>> getUsers() {
-        return ResponseEntity.ok(userService.findAll());
+    public ResponseEntity<List<UserDto>> getUsers(UserFilterModel userFilterModel) {
+        return ResponseEntity.ok(userService.findAll(userFilterModel));
     }
 
     @GetMapping(path = "/{id}")

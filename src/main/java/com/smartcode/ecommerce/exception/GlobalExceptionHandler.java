@@ -3,14 +3,12 @@ package com.smartcode.ecommerce.exception;
 
 import com.smartcode.ecommerce.util.ApiError;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
@@ -57,7 +55,6 @@ public class GlobalExceptionHandler {
     private void logError(HttpServletRequest request, Exception exception) {
         log.error(exception.getMessage());
         log.error("RequestURI {}", request.getRequestURI());
-        exception.printStackTrace();
     }
 
 

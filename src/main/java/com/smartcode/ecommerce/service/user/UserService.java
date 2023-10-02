@@ -1,5 +1,6 @@
 package com.smartcode.ecommerce.service.user;
 
+import com.smartcode.ecommerce.model.user.UserFilterModel;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
 import com.smartcode.ecommerce.model.user.UserEntity;
@@ -20,7 +21,7 @@ public interface UserService {
 
     UserDto findByEmail(String email);
 
-    List<UserDto> findAll();
+    List<UserDto> findAll(UserFilterModel userFilterModel);
 
 
 

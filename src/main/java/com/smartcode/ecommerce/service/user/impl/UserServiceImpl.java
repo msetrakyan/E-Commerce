@@ -3,6 +3,7 @@ package com.smartcode.ecommerce.service.user.impl;
 import com.smartcode.ecommerce.exception.DuplicationException;
 import com.smartcode.ecommerce.exception.ResourceNotFoundException;
 import com.smartcode.ecommerce.mapper.UserMapper;
+import com.smartcode.ecommerce.model.user.UserFilterModel;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
 import com.smartcode.ecommerce.model.user.UserEntity;
@@ -10,8 +11,12 @@ import com.smartcode.ecommerce.repository.UserRepository;
 import com.smartcode.ecommerce.service.mail.MailService;
 import com.smartcode.ecommerce.service.user.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -58,12 +63,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public UserDto findById(Integer id) {
-
-        UserEntity userEntity = userRepository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException(String.format("User by id: %d does not exist", id))
-                );
-
+        UserEntity userEntity = userRepository.findById(id)
+                .orElseThrow(() ->
+                     new ResourceNotFoundException(String.format("User by id: %d not found", id)));
         return userMapper.toDto(userEntity);
     }
 
@@ -90,7 +94,8 @@ public class UserServiceImpl implements UserService {
         return userMapper.toDto(userEntity);
     }
 
-    public List<UserDto> findAll() {
+
+    public List<UserDto> findAll(UserFilterModel userFilterModel) {
         return userRepository.findAll().stream().map(userMapper::toDto).toList();
     }
 
