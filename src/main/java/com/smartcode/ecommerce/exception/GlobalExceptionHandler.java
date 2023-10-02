@@ -26,21 +26,21 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(code = HttpStatus.NOT_FOUND)
-    public ResponseEntity<ApiError> handleResourceNotFoundException(HttpServletRequest request, DuplicationException exception) {
+    public ResponseEntity<ApiError> handleResourceNotFoundException(HttpServletRequest request, ResourceNotFoundException exception) {
         logError(request, exception);
         return buildResponse(HttpStatus.NOT_FOUND, exception.getMessage(), request.getRequestURI());
     }
 
     @ExceptionHandler(ValidationException.class)
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
-    public ResponseEntity<ApiError> handleVerificationException(HttpServletRequest request, DuplicationException exception) {
+    public ResponseEntity<ApiError> handleVerificationException(HttpServletRequest request, ValidationException exception) {
         logError(request, exception);
         return buildResponse(HttpStatus.UNAUTHORIZED, exception.getMessage(), request.getRequestURI());
     }
 
     @ExceptionHandler(VerificationException.class)
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
-    public ResponseEntity<ApiError> handleValidationException(HttpServletRequest request, DuplicationException exception) {
+    public ResponseEntity<ApiError> handleValidationException(HttpServletRequest request, VerificationException exception) {
         logError(request, exception);
         return buildResponse(HttpStatus.BAD_REQUEST, exception.getMessage(), request.getRequestURI());
     }
