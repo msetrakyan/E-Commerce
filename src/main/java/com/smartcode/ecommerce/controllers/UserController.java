@@ -17,13 +17,6 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-    private final MailService mailService;
-
-    @PostMapping
-    public ResponseEntity<UserDto> create(@RequestBody UserCreateRequest userCreateRequest) {
-        return ResponseEntity.ok(userService.create(userCreateRequest));
-    }
-
 
 
     @GetMapping

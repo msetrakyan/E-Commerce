@@ -2,6 +2,7 @@ package com.smartcode.ecommerce.repository;
 
 import com.smartcode.ecommerce.model.user.UserEntity;
 import com.smartcode.ecommerce.model.user.UserFilterModel;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
@@ -15,8 +16,8 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer>, JpaS
 
     UserEntity findByUsername(String username);
     UserEntity findByEmail (String email);
-    List<UserEntity> findAll(UserFilterModel userFilterModel);
 
+    List<UserEntity> findAll(Specification specification);
 
 
 }

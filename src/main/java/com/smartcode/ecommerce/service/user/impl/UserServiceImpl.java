@@ -10,6 +10,7 @@ import com.smartcode.ecommerce.model.user.UserEntity;
 import com.smartcode.ecommerce.repository.UserRepository;
 import com.smartcode.ecommerce.service.mail.MailService;
 import com.smartcode.ecommerce.service.user.UserService;
+import com.smartcode.ecommerce.spec.UserSpecification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final MailService mailService;
     private final UserMapper userMapper;
+    private final UserSpecification userSpecification;
 
     public UserDto create(UserCreateRequest userCreateRequest) {
 
@@ -96,7 +98,7 @@ public class UserServiceImpl implements UserService {
 
 
     public List<UserDto> findAll(UserFilterModel userFilterModel) {
-        return userRepository.findAll().stream().map(userMapper::toDto).toList();
+        return userRepository.findAll(userSpecification.filterAndSearch(userFilterModel)).stream().map(userMapper::toDto).toList();
     }
 
 
