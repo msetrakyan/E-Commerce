@@ -19,5 +19,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer>, JpaS
 
     List<UserEntity> findAll(Specification specification);
 
+    Boolean existsByUsername(String username);
+
 
 }

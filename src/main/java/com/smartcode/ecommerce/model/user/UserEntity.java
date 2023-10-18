@@ -1,6 +1,7 @@
 package com.smartcode.ecommerce.model.user;
 
 
+import com.smartcode.ecommerce.model.roles.RoleEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
 @Setter
@@ -59,6 +59,9 @@ public class UserEntity {
 
     @Column(nullable = false)
     private String code;
+
+    @ManyToOne(optional = false)
+    private RoleEntity role;
 
 
 }

@@ -1,0 +1,655 @@
+2023-10-03 18:37:18.159  INFO 14471 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 14471 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 18:37:18.162  INFO 14471 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 18:37:18.195  INFO 14471 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 18:37:18.506  INFO 14471 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 18:37:18.531  INFO 14471 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2023-10-03 18:37:18.821  INFO 14471 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 18:37:18.826  INFO 14471 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 18:37:18.826  INFO 14471 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 18:37:18.854  INFO 14471 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 18:37:18.854  INFO 14471 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 659 ms
+2023-10-03 18:37:19.020  INFO 14471 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 18:37:19.047  INFO 14471 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 18:37:19.140  INFO 14471 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 18:37:19.212  INFO 14471 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 18:37:19.320  INFO 14471 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 18:37:19.333  INFO 14471 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 18:37:19.614  INFO 14471 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 18:37:19.618  INFO 14471 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:37:19.787  WARN 14471 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 18:37:19.927  WARN 14471 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1a1a2f39-5e95-4166-b243-fac31260e720
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 18:37:19.971  INFO 14471 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48ad3e08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a7c8cab, org.springframework.security.web.context.SecurityContextPersistenceFilter@53c24a9f, org.springframework.security.web.header.HeaderWriterFilter@7af2fadf, org.springframework.security.web.csrf.CsrfFilter@8cee5ac, org.springframework.security.web.authentication.logout.LogoutFilter@5d9a282d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d1dd198, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@28dcfd62, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@123747ee, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3720a86e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55abc9d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b6a6106, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d1dd6ea, org.springframework.security.web.session.SessionManagementFilter@44b1e44, org.springframework.security.web.access.ExceptionTranslationFilter@3d6ef078, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65f44478]
+2023-10-03 18:37:19.983  INFO 14471 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 18:37:19.997  INFO 14471 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 18:37:20.004  INFO 14471 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 2.059 seconds (JVM running for 2.476)
+2023-10-03 18:37:23.880  INFO 14471 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 18:37:56.462  INFO 14471 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:37:56.464  INFO 14471 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 18:37:56.465  INFO 14471 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 18:38:56.181  INFO 14511 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 14511 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 18:38:56.182  INFO 14511 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 18:38:56.203  INFO 14511 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 18:38:56.483  INFO 14511 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 18:38:56.504  INFO 14511 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 18:38:56.763  INFO 14511 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 18:38:56.768  INFO 14511 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 18:38:56.768  INFO 14511 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 18:38:56.795  INFO 14511 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 18:38:56.795  INFO 14511 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2023-10-03 18:38:56.870  INFO 14511 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 18:38:56.894  INFO 14511 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 18:38:56.951  INFO 14511 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 18:38:56.997  INFO 14511 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 18:38:57.074  INFO 14511 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 18:38:57.086  INFO 14511 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 18:38:57.324  INFO 14511 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 18:38:57.328  INFO 14511 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:38:57.494  WARN 14511 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 18:38:57.633  WARN 14511 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 66bd1d0e-4b6d-4a31-92e1-3bc462f849cc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 18:38:57.679  INFO 14511 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37a2f2ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@227556bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@3079eede, org.springframework.security.web.header.HeaderWriterFilter@2b254131, org.springframework.security.web.csrf.CsrfFilter@2afd9073, org.springframework.security.web.authentication.logout.LogoutFilter@26425cdb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d161ab1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b523b75, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ef2c554, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6026813, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4076bdaa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@122edb73, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a796e18, org.springframework.security.web.session.SessionManagementFilter@55d33190, org.springframework.security.web.access.ExceptionTranslationFilter@1ae70b6a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66b56941]
+2023-10-03 18:38:57.691  INFO 14511 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 18:38:57.705  INFO 14511 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 18:38:57.711  INFO 14511 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.685 seconds (JVM running for 2.086)
+2023-10-03 18:39:06.477  INFO 14511 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 18:39:51.323  INFO 14511 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:39:51.326  INFO 14511 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 18:39:51.328  INFO 14511 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 18:40:07.168  INFO 14538 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 14538 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 18:40:07.170  INFO 14538 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 18:40:07.205  INFO 14538 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 18:40:07.625  INFO 14538 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 18:40:07.653  INFO 14538 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2023-10-03 18:40:07.963  INFO 14538 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 18:40:07.967  INFO 14538 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 18:40:07.967  INFO 14538 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 18:40:07.995  INFO 14538 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 18:40:07.995  INFO 14538 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 789 ms
+2023-10-03 18:40:08.083  INFO 14538 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 18:40:08.112  INFO 14538 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 18:40:08.190  INFO 14538 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 18:40:08.252  INFO 14538 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 18:40:08.329  INFO 14538 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 18:40:08.345  INFO 14538 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 18:40:08.620  INFO 14538 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 18:40:08.624  INFO 14538 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:40:08.785  WARN 14538 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 18:40:08.923  WARN 14538 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a1d783bd-6070-4a4b-9bf3-8ba028e736ec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 18:40:08.979  INFO 14538 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1db06c20, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a34d332, org.springframework.security.web.context.SecurityContextPersistenceFilter@299bf5e8, org.springframework.security.web.header.HeaderWriterFilter@1db55b4a, org.springframework.security.web.csrf.CsrfFilter@3cd36568, org.springframework.security.web.authentication.logout.LogoutFilter@e4df65d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78d2cacd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@76234208, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4f90bae0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@174c17eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fa8f10f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5233557f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6de61ebc, org.springframework.security.web.session.SessionManagementFilter@a40afb4, org.springframework.security.web.access.ExceptionTranslationFilter@41d097bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28163a86]
+2023-10-03 18:40:08.992  INFO 14538 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 18:40:09.006  INFO 14538 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 18:40:09.012  INFO 14538 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 2.066 seconds (JVM running for 2.463)
+2023-10-03 18:40:09.942  INFO 14538 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 18:40:20.498  WARN 14538 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "login"]
+2023-10-03 18:40:22.389  WARN 14538 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "login"]
+2023-10-03 18:40:24.133 ERROR 14538 --- [http-nio-8080-exec-10] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 18:40:24.134 ERROR 14538 --- [http-nio-8080-exec-10] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 18:40:24.145  WARN 14538 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 18:40:35.384 ERROR 14538 --- [http-nio-8080-exec-2] c.s.e.exception.GlobalExceptionHandler   : User by id: 3 not found
+2023-10-03 18:40:35.384 ERROR 14538 --- [http-nio-8080-exec-2] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/3
+2023-10-03 18:40:35.387  WARN 14538 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 3 not found]
+2023-10-03 18:41:15.379  INFO 14538 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:41:15.381  INFO 14538 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 18:41:15.382  INFO 14538 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 18:41:44.582  INFO 14586 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 14586 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 18:41:44.583  INFO 14586 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 18:41:44.602  INFO 14586 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 18:41:44.888  INFO 14586 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 18:41:44.909  INFO 14586 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 18:41:45.161  INFO 14586 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 18:41:45.165  INFO 14586 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 18:41:45.165  INFO 14586 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 18:41:45.189  INFO 14586 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 18:41:45.189  INFO 14586 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 586 ms
+2023-10-03 18:41:45.258  INFO 14586 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 18:41:45.282  INFO 14586 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 18:41:45.340  INFO 14586 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 18:41:45.380  INFO 14586 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 18:41:45.465  INFO 14586 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 18:41:45.480  INFO 14586 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 18:41:45.730  INFO 14586 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 18:41:45.733  INFO 14586 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:41:45.894  WARN 14586 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 18:41:46.033  WARN 14586 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 36ae1ab3-ca13-4952-90f3-5095cf4f3093
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 18:41:46.078  INFO 14586 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2133a18e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74222d05, org.springframework.security.web.context.SecurityContextPersistenceFilter@15688055, org.springframework.security.web.header.HeaderWriterFilter@223efd50, org.springframework.security.web.csrf.CsrfFilter@6b065b48, org.springframework.security.web.authentication.logout.LogoutFilter@7bfab734, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14ab8ed5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@796edfdf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@11638dde, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6fe75471, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@215887ca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dd9e390, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77d74a02, org.springframework.security.web.session.SessionManagementFilter@4d5bba0e, org.springframework.security.web.access.ExceptionTranslationFilter@6271065, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36ad9fd8]
+2023-10-03 18:41:46.114  INFO 14586 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 18:41:46.142  INFO 14586 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 18:41:46.150  INFO 14586 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.728 seconds (JVM running for 2.145)
+2023-10-03 18:41:48.040  INFO 14586 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 18:42:28.416  WARN 14586 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "login"]
+2023-10-03 18:42:29.303 ERROR 14586 --- [http-nio-8080-exec-1] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 18:42:29.303 ERROR 14586 --- [http-nio-8080-exec-1] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 18:42:29.312  WARN 14586 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 18:42:36.056  INFO 14586 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:42:36.058  INFO 14586 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 18:42:36.059  INFO 14586 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 18:50:10.297  INFO 14744 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 14744 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 18:50:10.298  INFO 14744 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 18:50:10.317  INFO 14744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 18:50:10.589  INFO 14744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 18:50:10.611  INFO 14744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 18:50:10.866  INFO 14744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 18:50:10.870  INFO 14744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 18:50:10.870  INFO 14744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 18:50:10.897  INFO 14744 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 18:50:10.897  INFO 14744 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 580 ms
+2023-10-03 18:50:10.968  INFO 14744 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 18:50:10.990  INFO 14744 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 18:50:11.052  INFO 14744 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 18:50:11.097  INFO 14744 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 18:50:11.167  INFO 14744 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 18:50:11.179  INFO 14744 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 18:50:11.424  INFO 14744 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 18:50:11.428  INFO 14744 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 18:50:11.592  WARN 14744 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 18:50:11.733  WARN 14744 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 36b3a502-3706-4132-af4f-fe4412edae4a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 18:50:11.784  INFO 14744 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@498086b5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f25191e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1da92a8f, org.springframework.security.web.header.HeaderWriterFilter@17209fff, org.springframework.security.web.csrf.CsrfFilter@677966b2, org.springframework.security.web.authentication.logout.LogoutFilter@34a02494, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2cd61f2b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@60d265b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b4a51f0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36dc05ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14276932, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3df25328, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@736a4c3b, org.springframework.security.web.session.SessionManagementFilter@73e4af2a, org.springframework.security.web.access.ExceptionTranslationFilter@723de8be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8ca94c3]
+2023-10-03 18:50:11.802  INFO 14744 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 18:50:11.818  INFO 14744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 18:50:11.824  INFO 14744 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.679 seconds (JVM running for 2.073)
+2023-10-03 18:50:15.319  INFO 14744 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 18:50:27.288 ERROR 14744 --- [http-nio-8080-exec-6] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 18:50:27.288 ERROR 14744 --- [http-nio-8080-exec-6] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 18:50:27.316  WARN 14744 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 18:59:20.194  WARN 14744 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m38s866ms).
+2023-10-03 19:00:11.619  INFO 14744 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 19:00:11.623  INFO 14744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 19:00:11.624  INFO 14744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 19:09:10.310  INFO 15008 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 15008 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 19:09:10.310  INFO 15008 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 19:09:10.332  INFO 15008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 19:09:10.708  INFO 15008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 19:09:10.737  INFO 15008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2023-10-03 19:09:11.043  INFO 15008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 19:09:11.047  INFO 15008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 19:09:11.048  INFO 15008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 19:09:11.080  INFO 15008 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 19:09:11.080  INFO 15008 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 747 ms
+2023-10-03 19:09:11.156  INFO 15008 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 19:09:11.180  INFO 15008 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 19:09:11.239  INFO 15008 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 19:09:11.285  INFO 15008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 19:09:11.379  INFO 15008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 19:09:11.392  INFO 15008 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 19:09:11.647  INFO 15008 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 19:09:11.650  INFO 15008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 19:09:11.809  WARN 15008 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 19:09:11.944  WARN 15008 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 82cfe1ff-74b2-4e31-b4e9-fdb77b125d00
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 19:09:11.989  INFO 15008 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b1dfc7f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f15df7d, org.springframework.security.web.context.SecurityContextPersistenceFilter@34defbd5, org.springframework.security.web.header.HeaderWriterFilter@59f44484, org.springframework.security.web.csrf.CsrfFilter@4a0cda0d, org.springframework.security.web.authentication.logout.LogoutFilter@2df26d9a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19ef4744, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1a26f2ac, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c7d76d2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@463a54dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b80bf7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1db5a15b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10529745, org.springframework.security.web.session.SessionManagementFilter@1b2281f1, org.springframework.security.web.access.ExceptionTranslationFilter@8b2279c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2002ed8d]
+2023-10-03 19:09:12.001  INFO 15008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 19:09:12.015  INFO 15008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 19:09:12.021  INFO 15008 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.878 seconds (JVM running for 2.297)
+2023-10-03 19:09:12.301  INFO 15008 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 19:12:32.328  INFO 15008 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 19:12:32.331  INFO 15008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 19:12:32.333  INFO 15008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 20:34:01.059  INFO 15467 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 15467 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 20:34:01.059  INFO 15467 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 20:34:01.085  INFO 15467 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 20:34:01.388  INFO 15467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 20:34:01.414  INFO 15467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2023-10-03 20:34:01.655  INFO 15467 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 20:34:01.659  INFO 15467 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 20:34:01.659  INFO 15467 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 20:34:01.685  INFO 15467 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 20:34:01.685  INFO 15467 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 599 ms
+2023-10-03 20:34:01.758  INFO 15467 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 20:34:01.780  INFO 15467 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 20:34:01.835  INFO 15467 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 20:34:01.878  INFO 15467 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 20:34:01.976  INFO 15467 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 20:34:01.989  INFO 15467 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 20:34:02.232  INFO 15467 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 20:34:02.236  INFO 15467 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:34:02.399  WARN 15467 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2cab4913-8e5a-4410-b7e7-9d9f54722bcc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 20:34:02.450  INFO 15467 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@661bcbf7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b65be4f, org.springframework.security.web.context.SecurityContextPersistenceFilter@ca2fc0d, org.springframework.security.web.header.HeaderWriterFilter@1d270033, org.springframework.security.web.csrf.CsrfFilter@742bf3b0, org.springframework.security.web.authentication.logout.LogoutFilter@6bc51123, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b26d2a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11385e1b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f4d08b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8479ab2, org.springframework.security.web.session.SessionManagementFilter@5184db89, org.springframework.security.web.access.ExceptionTranslationFilter@698e0b9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a90ddfa]
+2023-10-03 20:34:02.471  WARN 15467 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 20:34:02.600  INFO 15467 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 20:34:02.614  INFO 15467 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 20:34:02.620  INFO 15467 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.723 seconds (JVM running for 2.013)
+2023-10-03 20:34:07.881  INFO 15467 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 20:34:30.527  WARN 15467 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "login"]
+2023-10-03 20:34:34.401  WARN 15467 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "register"]
+2023-10-03 20:34:35.719  WARN 15467 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "register"]
+2023-10-03 20:34:36.990 ERROR 15467 --- [http-nio-8080-exec-2] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 20:34:36.990 ERROR 15467 --- [http-nio-8080-exec-2] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 20:34:37.028  WARN 15467 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 20:34:42.794  INFO 15467 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:34:42.797  INFO 15467 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 20:34:42.798  INFO 15467 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 20:54:34.043  INFO 15784 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 15784 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 20:54:34.043  INFO 15784 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 20:54:34.066  INFO 15784 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 20:54:34.364  INFO 15784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 20:54:34.385  INFO 15784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 20:54:34.633  INFO 15784 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 20:54:34.636  INFO 15784 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 20:54:34.637  INFO 15784 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 20:54:34.662  INFO 15784 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 20:54:34.662  INFO 15784 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
+2023-10-03 20:54:34.732  INFO 15784 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 20:54:34.758  INFO 15784 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 20:54:34.814  INFO 15784 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 20:54:34.856  INFO 15784 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 20:54:34.958  INFO 15784 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 20:54:34.971  INFO 15784 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 20:54:35.223  INFO 15784 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 20:54:35.227  INFO 15784 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:54:35.395  WARN 15784 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f4f3bbc8-490c-4e9b-ad4d-2a0a1e204f37
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 20:54:35.449  INFO 15784 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@363ebe44, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ddc7f57, org.springframework.security.web.context.SecurityContextPersistenceFilter@db069c0, org.springframework.security.web.header.HeaderWriterFilter@3479db94, org.springframework.security.web.csrf.CsrfFilter@7470c4da, org.springframework.security.web.authentication.logout.LogoutFilter@38c1ff55, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c0efefa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50eb666f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f1be791, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b08d255, org.springframework.security.web.session.SessionManagementFilter@64d094b2, org.springframework.security.web.access.ExceptionTranslationFilter@4ab83f0d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13469fe0]
+2023-10-03 20:54:35.470  WARN 15784 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 20:54:35.598  INFO 15784 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 20:54:35.615  INFO 15784 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 20:54:35.622  INFO 15784 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.753 seconds (JVM running for 2.048)
+2023-10-03 20:54:41.241  INFO 15784 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 20:54:49.054  WARN 15784 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "register"]
+2023-10-03 20:54:51.263 ERROR 15784 --- [http-nio-8080-exec-4] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 20:54:51.263 ERROR 15784 --- [http-nio-8080-exec-4] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 20:54:51.304  WARN 15784 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 20:57:50.956 ERROR 15784 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 20:57:50.957 ERROR 15784 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 20:57:50.958  WARN 15784 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 20:57:54.690 ERROR 15784 --- [http-nio-8080-exec-5] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 20:57:54.691 ERROR 15784 --- [http-nio-8080-exec-5] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 20:57:54.692  WARN 15784 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 20:58:09.254  WARN 15784 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-10-03 20:58:39.717  INFO 15784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:58:39.720  INFO 15784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 20:58:39.721  INFO 15784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 20:58:42.848  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 15934 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 20:58:42.849  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 20:58:42.876  INFO 15934 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 20:58:43.150  INFO 15934 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 20:58:43.171  INFO 15934 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 20:58:43.416  INFO 15934 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 20:58:43.420  INFO 15934 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 20:58:43.420  INFO 15934 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 20:58:43.445  INFO 15934 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 20:58:43.445  INFO 15934 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 569 ms
+2023-10-03 20:58:43.514  INFO 15934 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 20:58:43.535  INFO 15934 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 20:58:43.594  INFO 15934 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 20:58:43.634  INFO 15934 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 20:58:43.712  INFO 15934 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 20:58:43.724  INFO 15934 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 20:58:43.980  INFO 15934 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 20:58:43.984  INFO 15934 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:58:44.148  WARN 15934 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9d983804-dfa9-4d0a-aea9-17c805785316
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 20:58:44.197  INFO 15934 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@764cd1f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30766a07, org.springframework.security.web.context.SecurityContextPersistenceFilter@569ce40e, org.springframework.security.web.header.HeaderWriterFilter@4146522e, org.springframework.security.web.csrf.CsrfFilter@395bc0bf, org.springframework.security.web.authentication.logout.LogoutFilter@6857bab6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5873c1e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40617be4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b94ca3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e36328d, org.springframework.security.web.session.SessionManagementFilter@43eabe5d, org.springframework.security.web.access.ExceptionTranslationFilter@42d66b56, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fe28167]
+2023-10-03 20:58:44.218  WARN 15934 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 20:58:44.352  INFO 15934 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 20:58:44.367  INFO 15934 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 20:58:44.373  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.69 seconds (JVM running for 1.961)
+2023-10-03 20:59:00.284  INFO 15934 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 20:59:00.935  INFO 15934 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-03 20:59:00.948  INFO 15934 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-03 20:59:00.949  INFO 15934 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-03 20:59:00.960  INFO 15934 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:59:00.964  INFO 15934 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 20:59:00.966  INFO 15934 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 20:59:01.018  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 15934 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 20:59:01.018  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 20:59:01.085  INFO 15934 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 20:59:01.091  INFO 15934 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-10-03 20:59:01.132  INFO 15934 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 20:59:01.132  INFO 15934 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 20:59:01.133  INFO 15934 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 20:59:01.137  INFO 15934 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 20:59:01.137  INFO 15934 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
+2023-10-03 20:59:01.155  INFO 15934 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 20:59:01.157  INFO 15934 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-10-03 20:59:01.174  INFO 15934 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-10-03 20:59:01.174  INFO 15934 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 20:59:01.205  INFO 15934 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 20:59:01.206  INFO 15934 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:59:01.265  WARN 15934 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8e9e4ca6-8916-4da0-83d6-a9791ab74930
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 20:59:01.271  INFO 15934 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8ae022d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64886071, org.springframework.security.web.context.SecurityContextPersistenceFilter@c453fb3, org.springframework.security.web.header.HeaderWriterFilter@4de57795, org.springframework.security.web.csrf.CsrfFilter@7e73512b, org.springframework.security.web.authentication.logout.LogoutFilter@30ed614a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@786bf609, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45ae30e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2391ae19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51d343e8, org.springframework.security.web.session.SessionManagementFilter@685bd19a, org.springframework.security.web.access.ExceptionTranslationFilter@6405a4f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@352019d9]
+2023-10-03 20:59:01.280  WARN 15934 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 20:59:01.327  INFO 15934 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 20:59:01.332  INFO 15934 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 20:59:01.334  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 0.331 seconds (JVM running for 18.922)
+2023-10-03 20:59:01.335  INFO 15934 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-03 20:59:04.024  INFO 15934 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 20:59:43.210  INFO 15934 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-03 20:59:43.224  INFO 15934 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-03 20:59:43.225  INFO 15934 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-03 20:59:43.237  INFO 15934 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:59:43.238  INFO 15934 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-10-03 20:59:43.240  INFO 15934 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-10-03 20:59:43.288  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 15934 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 20:59:43.288  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 20:59:43.349  INFO 15934 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 20:59:43.354  INFO 15934 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-10-03 20:59:43.394  INFO 15934 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 20:59:43.394  INFO 15934 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 20:59:43.394  INFO 15934 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 20:59:43.399  INFO 15934 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 20:59:43.399  INFO 15934 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 111 ms
+2023-10-03 20:59:43.414  INFO 15934 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 20:59:43.416  INFO 15934 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-10-03 20:59:43.433  INFO 15934 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-10-03 20:59:43.434  INFO 15934 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 20:59:43.468  INFO 15934 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 20:59:43.468  INFO 15934 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 20:59:43.524  WARN 15934 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ae06598c-33f4-44b4-b1c4-fa7400dd78fa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 20:59:43.530  INFO 15934 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54677f84, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75dd91f, org.springframework.security.web.context.SecurityContextPersistenceFilter@638d57b, org.springframework.security.web.header.HeaderWriterFilter@3f9ed7a0, org.springframework.security.web.csrf.CsrfFilter@7a2b6e75, org.springframework.security.web.authentication.logout.LogoutFilter@4791ad4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@26b5895a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20d51602, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@693ff66f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f4e3fc5, org.springframework.security.web.session.SessionManagementFilter@27414f20, org.springframework.security.web.access.ExceptionTranslationFilter@778a3836, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@711d4c]
+2023-10-03 20:59:43.537  WARN 15934 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 20:59:43.574  INFO 15934 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 20:59:43.580  INFO 15934 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 20:59:43.582  INFO 15934 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 0.306 seconds (JVM running for 61.171)
+2023-10-03 20:59:43.583  INFO 15934 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-03 20:59:44.350  INFO 15934 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:00:01.215 ERROR 15934 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 21:00:01.216 ERROR 15934 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 21:00:01.223  WARN 15934 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 21:00:07.827 ERROR 15934 --- [http-nio-8080-exec-5] c.s.e.exception.GlobalExceptionHandler   : User by id: 3 not found
+2023-10-03 21:00:07.828 ERROR 15934 --- [http-nio-8080-exec-5] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/3
+2023-10-03 21:00:07.829  WARN 15934 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 3 not found]
+2023-10-03 21:00:42.959  INFO 15934 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:00:42.959  INFO 15934 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-10-03 21:00:42.959  INFO 15934 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-10-03 21:01:04.455  INFO 16004 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 16004 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 21:01:04.455  INFO 16004 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 21:01:04.476  INFO 16004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 21:01:04.753  INFO 16004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 21:01:04.774  INFO 16004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 21:01:05.018  INFO 16004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 21:01:05.022  INFO 16004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 21:01:05.022  INFO 16004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 21:01:05.047  INFO 16004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 21:01:05.047  INFO 16004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 570 ms
+2023-10-03 21:01:05.116  INFO 16004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 21:01:05.134  INFO 16004 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 21:01:05.196  INFO 16004 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 21:01:05.233  INFO 16004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 21:01:05.304  INFO 16004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 21:01:05.316  INFO 16004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 21:01:05.541  INFO 16004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 21:01:05.545  INFO 16004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:01:05.709  WARN 16004 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e3b95761-e0da-4971-88db-9a424d6e7275
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 21:01:05.757  INFO 16004 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6816426c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26bfa5db, org.springframework.security.web.context.SecurityContextPersistenceFilter@5839d507, org.springframework.security.web.header.HeaderWriterFilter@14d7132, org.springframework.security.web.csrf.CsrfFilter@50fe92fd, org.springframework.security.web.authentication.logout.LogoutFilter@145f678e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3c0e4d38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6618075e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52a4ce9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f8ad066, org.springframework.security.web.session.SessionManagementFilter@660c3a62, org.springframework.security.web.access.ExceptionTranslationFilter@3a95184, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@507fadaf]
+2023-10-03 21:01:05.778  WARN 16004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 21:01:05.905  INFO 16004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 21:01:05.918  INFO 16004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 21:01:05.924  INFO 16004 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.631 seconds (JVM running for 1.909)
+2023-10-03 21:01:09.558  INFO 16004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:01:22.191 ERROR 16004 --- [http-nio-8080-exec-6] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:01:22.191 ERROR 16004 --- [http-nio-8080-exec-6] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:01:22.202  WARN 16004 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:02:22.344  INFO 16004 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:02:22.347  INFO 16004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 21:02:22.348  INFO 16004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 21:02:39.872  INFO 16053 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 16053 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 21:02:39.873  INFO 16053 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 21:02:39.893  INFO 16053 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 21:02:40.172  INFO 16053 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 21:02:40.194  INFO 16053 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 21:02:40.438  INFO 16053 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 21:02:40.442  INFO 16053 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 21:02:40.442  INFO 16053 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 21:02:40.468  INFO 16053 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 21:02:40.469  INFO 16053 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 575 ms
+2023-10-03 21:02:40.532  INFO 16053 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 21:02:40.550  INFO 16053 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 21:02:40.605  INFO 16053 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 21:02:40.645  INFO 16053 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 21:02:40.720  INFO 16053 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 21:02:40.732  INFO 16053 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 21:02:40.967  INFO 16053 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 21:02:40.970  INFO 16053 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:02:41.134  WARN 16053 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9cb4bd1d-c2fc-4858-97bd-2593cf95ccce
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 21:02:41.179  INFO 16053 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7205bd65, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bfff2c5, org.springframework.security.web.context.SecurityContextPersistenceFilter@6961d56d, org.springframework.security.web.header.HeaderWriterFilter@7215198e, org.springframework.security.web.csrf.CsrfFilter@583df78c, org.springframework.security.web.authentication.logout.LogoutFilter@65b596a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@e12252, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fb42a90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29f1fa8a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e08bca7, org.springframework.security.web.session.SessionManagementFilter@203ddcba, org.springframework.security.web.access.ExceptionTranslationFilter@63c1ce78, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23c76bb0]
+2023-10-03 21:02:41.201  WARN 16053 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 21:02:41.329  INFO 16053 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 21:02:41.343  INFO 16053 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 21:02:41.350  INFO 16053 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.624 seconds (JVM running for 2.0)
+2023-10-03 21:02:47.479  INFO 16053 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:02:52.317  WARN 16053 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "register"]
+2023-10-03 21:02:53.777 ERROR 16053 --- [http-nio-8080-exec-4] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 21:02:53.777 ERROR 16053 --- [http-nio-8080-exec-4] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 21:02:53.808  WARN 16053 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 21:03:01.098  WARN 16053 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "register"]
+2023-10-03 21:03:06.473  INFO 16053 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:03:06.475  INFO 16053 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 21:03:06.477  INFO 16053 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 21:34:16.684  INFO 16593 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 16593 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 21:34:16.685  INFO 16593 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 21:34:16.705  INFO 16593 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 21:34:17.028  INFO 16593 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 21:34:17.056  INFO 16593 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2023-10-03 21:34:17.322  INFO 16593 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 21:34:17.326  INFO 16593 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 21:34:17.327  INFO 16593 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 21:34:17.367  INFO 16593 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 21:34:17.368  INFO 16593 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 662 ms
+2023-10-03 21:34:17.457  INFO 16593 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 21:34:17.484  INFO 16593 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 21:34:17.568  INFO 16593 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 21:34:17.615  INFO 16593 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 21:34:17.715  INFO 16593 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 21:34:17.728  INFO 16593 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 21:34:18.005  INFO 16593 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 21:34:18.010  INFO 16593 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:34:18.185  WARN 16593 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 976a6385-e2c9-45df-877a-a672d5214165
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 21:34:18.237  INFO 16593 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73cd43b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20379863, org.springframework.security.web.context.SecurityContextPersistenceFilter@169a8685, org.springframework.security.web.header.HeaderWriterFilter@56aeafa, org.springframework.security.web.csrf.CsrfFilter@64dd8b10, org.springframework.security.web.authentication.logout.LogoutFilter@71a2b224, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@40b24adc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b6afcdf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@250329b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24bd322c, org.springframework.security.web.session.SessionManagementFilter@2f2551f3, org.springframework.security.web.access.ExceptionTranslationFilter@28581017, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ff4c47e]
+2023-10-03 21:34:18.262  WARN 16593 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 21:34:18.406  INFO 16593 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 21:34:18.420  INFO 16593 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 21:34:18.426  INFO 16593 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.924 seconds (JVM running for 2.229)
+2023-10-03 21:34:38.665  INFO 16593 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:35:04.306  INFO 16593 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:35:04.308  INFO 16593 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 21:35:04.309  INFO 16593 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 21:35:41.927  INFO 16621 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 16621 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 21:35:41.928  INFO 16621 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 21:35:41.955  INFO 16621 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 21:35:42.250  INFO 16621 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 21:35:42.274  INFO 16621 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2023-10-03 21:35:42.551  INFO 16621 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 21:35:42.556  INFO 16621 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 21:35:42.557  INFO 16621 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 21:35:42.588  INFO 16621 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 21:35:42.588  INFO 16621 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 632 ms
+2023-10-03 21:35:42.681  INFO 16621 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 21:35:42.710  INFO 16621 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 21:35:42.781  INFO 16621 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 21:35:42.832  INFO 16621 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 21:35:42.918  INFO 16621 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 21:35:42.931  INFO 16621 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 21:35:43.209  INFO 16621 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 21:35:43.212  INFO 16621 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:35:43.373  WARN 16621 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9e82634c-2528-4bd7-8a76-62e6cefa2f5d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 21:35:43.418  INFO 16621 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71b544c6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f77732a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4784477c, org.springframework.security.web.header.HeaderWriterFilter@108bbc2c, org.springframework.security.web.csrf.CsrfFilter@4c6a6534, org.springframework.security.web.authentication.logout.LogoutFilter@5feb058f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64775d7f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@722022b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@508281f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f18af70, org.springframework.security.web.session.SessionManagementFilter@5465b3a3, org.springframework.security.web.access.ExceptionTranslationFilter@9fe03f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74bbb06b]
+2023-10-03 21:35:43.440  WARN 16621 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 21:35:43.586  INFO 16621 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 21:35:43.602  INFO 16621 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 21:35:43.608  INFO 16621 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.832 seconds (JVM running for 2.156)
+2023-10-03 21:35:45.758  INFO 16621 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:36:18.879 ERROR 16621 --- [http-nio-8080-exec-9] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:36:18.880 ERROR 16621 --- [http-nio-8080-exec-9] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:36:18.905  WARN 16621 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:36:22.263 ERROR 16621 --- [http-nio-8080-exec-10] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 21:36:22.264 ERROR 16621 --- [http-nio-8080-exec-10] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 21:36:22.265  WARN 16621 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 21:36:35.376  INFO 16621 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:36:35.379  INFO 16621 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 21:36:35.380  INFO 16621 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 21:38:05.948  INFO 16668 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 16668 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 21:38:05.949  INFO 16668 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 21:38:05.971  INFO 16668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 21:38:06.257  INFO 16668 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 21:38:06.277  INFO 16668 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2023-10-03 21:38:06.510  INFO 16668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 21:38:06.514  INFO 16668 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 21:38:06.515  INFO 16668 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 21:38:06.538  INFO 16668 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 21:38:06.538  INFO 16668 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2023-10-03 21:38:06.611  INFO 16668 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 21:38:06.632  INFO 16668 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 21:38:06.690  INFO 16668 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 21:38:06.731  INFO 16668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 21:38:06.800  INFO 16668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 21:38:06.813  INFO 16668 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 21:38:07.067  INFO 16668 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 21:38:07.071  INFO 16668 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:38:07.232  WARN 16668 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1b554346-3d34-4bac-b8ed-df595cd9dfec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 21:38:07.279  INFO 16668 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58489478, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16edac60, org.springframework.security.web.context.SecurityContextPersistenceFilter@abc26c4, org.springframework.security.web.header.HeaderWriterFilter@6f26be3d, org.springframework.security.web.csrf.CsrfFilter@7ba99bf6, org.springframework.security.web.authentication.logout.LogoutFilter@66fe3473, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@226d90c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@144e340e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ee776e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76027f10, org.springframework.security.web.session.SessionManagementFilter@5ec9d525, org.springframework.security.web.access.ExceptionTranslationFilter@3967b7cf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b1b8627]
+2023-10-03 21:38:07.303  WARN 16668 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 21:38:07.434  INFO 16668 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 21:38:07.447  INFO 16668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 21:38:07.453  INFO 16668 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.66 seconds (JVM running for 1.914)
+2023-10-03 21:38:10.751  INFO 16668 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:38:15.594 ERROR 16668 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 21:38:15.594 ERROR 16668 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 21:38:15.603  WARN 16668 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 21:38:16.488 ERROR 16668 --- [http-nio-8080-exec-4] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 21:38:16.488 ERROR 16668 --- [http-nio-8080-exec-4] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 21:38:16.490  WARN 16668 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 21:38:17.127 ERROR 16668 --- [http-nio-8080-exec-5] c.s.e.exception.GlobalExceptionHandler   : User by id: 1 not found
+2023-10-03 21:38:17.127 ERROR 16668 --- [http-nio-8080-exec-5] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/1
+2023-10-03 21:38:17.128  WARN 16668 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 1 not found]
+2023-10-03 21:38:20.085 ERROR 16668 --- [http-nio-8080-exec-6] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:20.085 ERROR 16668 --- [http-nio-8080-exec-6] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:20.087  WARN 16668 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:27.728 ERROR 16668 --- [http-nio-8080-exec-7] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:27.728 ERROR 16668 --- [http-nio-8080-exec-7] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:27.730  WARN 16668 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:30.272 ERROR 16668 --- [http-nio-8080-exec-8] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:30.272 ERROR 16668 --- [http-nio-8080-exec-8] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:30.274  WARN 16668 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:33.202 ERROR 16668 --- [http-nio-8080-exec-9] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:33.202 ERROR 16668 --- [http-nio-8080-exec-9] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:33.203  WARN 16668 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:42.428 ERROR 16668 --- [http-nio-8080-exec-10] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:42.428 ERROR 16668 --- [http-nio-8080-exec-10] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:42.430  WARN 16668 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:43.206 ERROR 16668 --- [http-nio-8080-exec-1] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:43.206 ERROR 16668 --- [http-nio-8080-exec-1] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:43.207  WARN 16668 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:44.256 ERROR 16668 --- [http-nio-8080-exec-2] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:44.257 ERROR 16668 --- [http-nio-8080-exec-2] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:44.258  WARN 16668 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:44.662 ERROR 16668 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:38:44.663 ERROR 16668 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:38:44.664  WARN 16668 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:38:56.045  INFO 16668 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:38:56.047  INFO 16668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 21:38:56.048  INFO 16668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-03 21:38:57.905  INFO 16692 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 17.0.8.1 on Marks-MacBook-Air.local with PID 16692 (/Users/msetrakyan/IdeaProjects/e-commerce/target/classes started by msetrakyan in /Users/msetrakyan/IdeaProjects/e-commerce)
+2023-10-03 21:38:57.906  INFO 16692 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-10-03 21:38:57.952  INFO 16692 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 21:38:58.226  INFO 16692 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-03 21:38:58.247  INFO 16692 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-10-03 21:38:58.483  INFO 16692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-03 21:38:58.487  INFO 16692 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-03 21:38:58.487  INFO 16692 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-03 21:38:58.511  INFO 16692 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-03 21:38:58.511  INFO 16692 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2023-10-03 21:38:58.578  INFO 16692 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-03 21:38:58.597  INFO 16692 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-03 21:38:58.651  INFO 16692 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-03 21:38:58.688  INFO 16692 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 21:38:58.778  INFO 16692 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 21:38:58.791  INFO 16692 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-10-03 21:38:59.024  INFO 16692 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-03 21:38:59.028  INFO 16692 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:38:59.189  WARN 16692 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 71b838e6-0774-4386-8963-0657db03a786
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-03 21:38:59.234  INFO 16692 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54b6007, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53662425, org.springframework.security.web.context.SecurityContextPersistenceFilter@eaaebe9, org.springframework.security.web.header.HeaderWriterFilter@37c7b1af, org.springframework.security.web.csrf.CsrfFilter@3c44311f, org.springframework.security.web.authentication.logout.LogoutFilter@42c0e8e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66060fa4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@548a0e97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@360d5b3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5069f474, org.springframework.security.web.session.SessionManagementFilter@4d523583, org.springframework.security.web.access.ExceptionTranslationFilter@76d179c0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50f6158b]
+2023-10-03 21:38:59.256  WARN 16692 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-03 21:38:59.386  INFO 16692 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-03 21:38:59.403  INFO 16692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 21:38:59.408  INFO 16692 --- [restartedMain] c.s.ecommerce.ECommerceApplication       : Started ECommerceApplication in 1.782 seconds (JVM running for 2.046)
+2023-10-03 21:39:03.138  INFO 16692 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 21:39:03.187 ERROR 16692 --- [http-nio-8080-exec-1] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:39:03.187 ERROR 16692 --- [http-nio-8080-exec-1] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:39:03.209  WARN 16692 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:39:03.960 ERROR 16692 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : User by id: 4 not found
+2023-10-03 21:39:03.961 ERROR 16692 --- [http-nio-8080-exec-3] c.s.e.exception.GlobalExceptionHandler   : RequestURI /users/4
+2023-10-03 21:39:03.962  WARN 16692 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartcode.ecommerce.exception.ResourceNotFoundException: User by id: 4 not found]
+2023-10-03 21:44:48.704  INFO 16692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-03 21:44:48.707  INFO 16692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-03 21:44:48.709  INFO 16692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

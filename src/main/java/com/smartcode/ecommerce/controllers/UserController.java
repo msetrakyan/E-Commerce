@@ -1,9 +1,7 @@
 package com.smartcode.ecommerce.controllers;
 
 import com.smartcode.ecommerce.model.user.UserFilterModel;
-import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
-import com.smartcode.ecommerce.service.mail.MailService;
 import com.smartcode.ecommerce.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
