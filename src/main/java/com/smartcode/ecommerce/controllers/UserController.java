@@ -1,12 +1,15 @@
 package com.smartcode.ecommerce.controllers;
 
+import com.smartcode.ecommerce.model.user.UserEntity;
 import com.smartcode.ecommerce.model.user.UserFilterModel;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
+import com.smartcode.ecommerce.model.verification.VerificationDto;
 import com.smartcode.ecommerce.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,6 +34,11 @@ public class UserController {
     public ResponseEntity<UserDto> delete(@RequestParam Integer id) {
         userService.delete(id);
         return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/verify")
+    public void verify(@RequestBody @Valid VerificationDto verificationDto) {
+        userService.verify(verificationDto);
     }
 
 

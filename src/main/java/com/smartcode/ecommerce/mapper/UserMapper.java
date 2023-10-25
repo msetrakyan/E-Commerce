@@ -11,11 +11,9 @@ import org.mapstruct.Mapping;
 public interface UserMapper {
 
 
-    @Mapping(target = "name")
     UserDto toDto(UserEntity userEntity);
 
 
-    @Mapping(target = "name")
     UserEntity toEntity(UserCreateRequest userCreateRequest);
 
 

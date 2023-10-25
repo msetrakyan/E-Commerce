@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Mark
+      changes:
+        - sqlFile:
+            path: classpath:/db/changelog/V1_Initialization.sql
+                    
+  - changeSet:
+      id: 2
+      author: Mark
+      changes:
+        - sqlFile:
+            path: classpath:/db/changelog/V2_Initialization.sql
+
+

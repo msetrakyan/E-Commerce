@@ -1,6 +1,7 @@
 package com.smartcode.ecommerce.model.user;
 
 
+import com.smartcode.ecommerce.model.BaseEntity;
 import com.smartcode.ecommerce.model.roles.RoleEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,13 +11,12 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity
+@Entity(name = "users")
 @Setter
 @Getter
-@Table(name = "users")
 @Component
 @NoArgsConstructor
-public class UserEntity {
+public class UserEntity extends BaseEntity {
 
 
     public UserEntity(String name, String lastname, Integer age, String username, String password, String email) {
@@ -27,11 +27,6 @@ public class UserEntity {
         this.password = password;
         this.email = email;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Integer id;
 
     @Column(nullable = false)
     private String name;
