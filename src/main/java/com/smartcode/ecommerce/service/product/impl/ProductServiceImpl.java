@@ -7,8 +7,10 @@ import com.smartcode.ecommerce.model.action.ActionType;
 import com.smartcode.ecommerce.model.product.ProductEntity;
 import com.smartcode.ecommerce.model.product.dto.ProductCreateRequest;
 import com.smartcode.ecommerce.model.product.dto.ProductDto;
+import com.smartcode.ecommerce.model.user.UserEntity;
 import com.smartcode.ecommerce.publish.ApplicationPublisher;
 import com.smartcode.ecommerce.repository.ProductRepository;
+import com.smartcode.ecommerce.repository.UserRepository;
 import com.smartcode.ecommerce.service.product.ProductService;
 import com.smartcode.ecommerce.util.CurrentUser;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +27,7 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
     private final ApplicationPublisher applicationPublisher;
+    private final UserRepository userRepository;
 
 
     @Override
@@ -39,7 +42,6 @@ public class ProductServiceImpl implements ProductService {
         actionRequestDto.setActionType(ActionType.CREATE);
         actionRequestDto.setEntityType("Product");
         applicationPublisher.publishActionEvent(actionRequestDto);
-
 
         return productMapper.toDto(productEntity);
     }
@@ -98,6 +100,21 @@ public class ProductServiceImpl implements ProductService {
         new ResourceNotFoundException(String.format("User by id: %d does not exist", id))
         );
         return productMapper.toDto(productEntity);
+    }
+
+    @Override
+    public void buy(Integer productId) {
+
+        ProductEntity product = productRepository.findById(productId).get();
+
+        Integer userId = CurrentUser.getId();
+
+        UserEntity user = userRepository.getReferenceById(userId);
+
+        user.getCart().add(product);
+
+        userRepository.save(user);
+        
     }
 
 

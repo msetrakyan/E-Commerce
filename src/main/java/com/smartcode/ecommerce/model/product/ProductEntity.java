@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 @Setter
 @Getter
@@ -18,7 +19,7 @@ public class ProductEntity extends BaseEntity {
     private String company;
 
     @Column(nullable = false)
-    private Double price;
+    private BigDecimal price;
 
     @Column(nullable = false)
     private String category;

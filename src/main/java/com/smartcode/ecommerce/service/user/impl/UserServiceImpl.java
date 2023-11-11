@@ -3,9 +3,12 @@ package com.smartcode.ecommerce.service.user.impl;
 import com.smartcode.ecommerce.exception.DuplicationException;
 import com.smartcode.ecommerce.exception.ResourceNotFoundException;
 import com.smartcode.ecommerce.exception.VerificationException;
+import com.smartcode.ecommerce.mapper.ProductMapper;
 import com.smartcode.ecommerce.mapper.UserMapper;
 import com.smartcode.ecommerce.model.action.ActionRequestDto;
 import com.smartcode.ecommerce.model.action.ActionType;
+import com.smartcode.ecommerce.model.product.ProductEntity;
+import com.smartcode.ecommerce.model.product.dto.ProductDto;
 import com.smartcode.ecommerce.model.user.UserFilterModel;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
@@ -32,6 +35,7 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
     private final UserSpecification userSpecification;
     private final ApplicationPublisher applicationPublisher;
+    private final ProductMapper productMapper;
 
     @Transactional
     public UserDto create(UserCreateRequest userCreateRequest) {
@@ -154,6 +158,21 @@ public class UserServiceImpl implements UserService {
         userEntity.setIsVerified(true);
         userRepository.save(userEntity);
     }
+
+
+
+
+    public List<ProductDto> getCart(Integer userId) {
+
+        UserEntity userEntity = userRepository.getReferenceById(userId);
+
+        List<ProductEntity> cart = userEntity.getCart();
+
+        return cart.stream().map(productMapper::toDto).toList();
+    }
+
+
+
 
 
 

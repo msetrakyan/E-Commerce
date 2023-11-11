@@ -2,14 +2,17 @@ package com.smartcode.ecommerce.model.user;
 
 
 import com.smartcode.ecommerce.model.BaseEntity;
+import com.smartcode.ecommerce.model.product.ProductEntity;
 import com.smartcode.ecommerce.model.roles.RoleEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity(name = "users")
 @Setter
@@ -57,6 +60,10 @@ public class UserEntity extends BaseEntity {
 
     @ManyToOne(optional = false)
     private RoleEntity role;
+
+    @ManyToMany
+    @Column(nullable = true)
+    private List<ProductEntity> cart;
 
 
 }

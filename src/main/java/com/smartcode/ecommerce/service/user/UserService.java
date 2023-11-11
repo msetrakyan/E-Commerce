@@ -1,5 +1,7 @@
 package com.smartcode.ecommerce.service.user;
 
+import com.smartcode.ecommerce.model.product.ProductEntity;
+import com.smartcode.ecommerce.model.product.dto.ProductDto;
 import com.smartcode.ecommerce.model.user.UserFilterModel;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
@@ -25,6 +27,8 @@ public interface UserService {
     List<UserDto> findAll(UserFilterModel userFilterModel);
 
     void verify(VerificationDto verificationDto);
+
+    List<ProductDto> getCart(Integer userId);
 
 
 

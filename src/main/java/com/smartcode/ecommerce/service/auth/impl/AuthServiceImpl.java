@@ -9,6 +9,7 @@ import com.smartcode.ecommerce.model.action.ActionRequestDto;
 import com.smartcode.ecommerce.model.action.ActionType;
 import com.smartcode.ecommerce.model.auth.AuthDto;
 import com.smartcode.ecommerce.model.auth.AuthRequestDto;
+import com.smartcode.ecommerce.model.notification.NotificationRequestDto;
 import com.smartcode.ecommerce.model.user.UserEntity;
 import com.smartcode.ecommerce.model.user.dto.UserCreateRequest;
 import com.smartcode.ecommerce.model.user.dto.UserDto;
@@ -16,6 +17,8 @@ import com.smartcode.ecommerce.publish.ApplicationPublisher;
 import com.smartcode.ecommerce.repository.RoleRepository;
 import com.smartcode.ecommerce.repository.UserRepository;
 import com.smartcode.ecommerce.service.auth.AuthService;
+import com.smartcode.ecommerce.service.producer.ProducerServiceActivity;
+import com.smartcode.ecommerce.service.producer.ProducerServiceNotification;
 import com.smartcode.ecommerce.util.CurrentUser;
 import com.smartcode.ecommerce.util.RandomGenerator;
 import com.smartcode.ecommerce.util.RoleEnum;
@@ -42,6 +45,8 @@ public class AuthServiceImpl implements AuthService {
     private final JwtTokenProvider jwtTokenProvider;
     private final ApplicationPublisher applicationPublisher;
     private final RoleRepository roleRepository;
+    private final ProducerServiceNotification producerServiceNotification;
+    private final ProducerServiceActivity producerServiceActivity;
 
 
     @Transactional
@@ -58,6 +63,7 @@ public class AuthServiceImpl implements AuthService {
         userEntity.setIsVerified(false);
         userEntity.setBalance(new BigDecimal(0));
         userEntity.setRole(roleRepository.findByRole(RoleEnum.USER));
+        userEntity.setCart(new ArrayList<>());
 
         userRepository.save(userEntity);
 
@@ -67,8 +73,18 @@ public class AuthServiceImpl implements AuthService {
         actionRequestDto.setActionType(ActionType.CREATE);
         actionRequestDto.setEntityType("User");
 
-        applicationPublisher.publishActionEvent(actionRequestDto);
-        applicationPublisher.publishRegistrationEvent(userCreateRequest.getEmail());
+//        applicationPublisher.publishActionEvent(actionRequestDto);
+//        applicationPublisher.publishRegistrationEvent(userCreateRequest.getEmail());
+            producerServiceActivity.sendMessage(actionRequestDto);
+
+            NotificationRequestDto notificationRequestDto = new NotificationRequestDto();
+            notificationRequestDto.setTitle("Verification");
+            notificationRequestDto.setEmail(userCreateRequest.getEmail());
+            notificationRequestDto.setUserId(userEntity.getId());
+            notificationRequestDto.setContent(userEntity.getCode());
+
+            producerServiceNotification.sendMessage(notificationRequestDto);
+
 
         return userMapper.toDto(userEntity);
     }
